@@ -2,6 +2,14 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import Button from './components/Button/Button.vue'
+import { ref, onMounted } from 'vue'
+import type { ButtonInstance } from './components/Button/types'
+const buttonRef = ref<ButtonInstance | null>(null)
+onMounted(() => {
+  if(buttonRef.value) {
+    console.log('buttonRef', buttonRef.value.ref);
+  }
+})
 </script>
 
 <template>
@@ -15,7 +23,7 @@ import Button from './components/Button/Button.vue'
 
   <main>
     <TheWelcome />
-    <Button type="primary" plain>Test Button</Button>
+    <Button type="primary" plain ref="buttonRef">Test Button</Button>
   </main>
 </template>
 
