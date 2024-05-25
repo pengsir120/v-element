@@ -38,5 +38,5 @@ defineExpose({
 })
 </script>
 
-<style scoped>
+<style>
 </style>

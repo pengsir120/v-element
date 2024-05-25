@@ -1,0 +1,23 @@
+body {
+  font-family: var(--vk-font-family);
+  font-weight: 400;
+  font-size: var(--vk-font-size-base);
+  color: var(--vk-text-color-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: var(--vk-color-primary);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--vk-color-primary-light-3);
+  }
+
+  &:active {
+    color: var(--vk-color-primary-dark-2);
+  }
+}
