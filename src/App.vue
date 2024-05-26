@@ -2,6 +2,8 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import Button from './components/Button/Button.vue'
+import Collapse from './components/Collapse/Collapse.vue'
+import Item from './components/Collapse/CollapseItem.vue'
 import { ref, onMounted } from 'vue'
 import type { ButtonInstance } from './components/Button/types'
 const buttonRef = ref<ButtonInstance | null>(null)
@@ -39,6 +41,22 @@ onMounted(() => {
     <Button type="danger" plain>Danger</Button><br /><br />
     <Button size="large">Large</Button>
     <Button size="small">Small</Button>
+
+    <Collapse>
+      <Item name="a">
+        <template #title>
+          <h1>nice title</h1>
+        </template>
+        <h1>headline title</h1>
+        <div>this is content a aaa</div>
+      </Item>
+      <Item name="b" title="nice title b item b">
+        <div>this is bbbbb test</div>
+      </Item>
+      <Item name="c" title="nice cccc" disabled>
+        <div>this is cccc test</div>
+      </Item>
+    </Collapse>
   </main>
 </template>
 
