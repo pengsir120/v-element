@@ -26,7 +26,7 @@ onMounted(() => {
       <HelloWorld msg="You did it!" />
     </div>
   </header>
-
+  <font-awesome-icon icon="fa-solid fa-user-secret" />
   <main>
     <TheWelcome />
     <Button plain>Plain Button</Button>
