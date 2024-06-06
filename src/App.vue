@@ -4,16 +4,19 @@ import TheWelcome from './components/TheWelcome.vue'
 import Button from './components/Button/Button.vue'
 import Collapse from './components/Collapse/Collapse.vue'
 import Item from './components/Collapse/CollapseItem.vue'
+import Icon from './components/Icon/Icon.vue'
 import { ref, onMounted } from 'vue'
 import type { ButtonInstance } from './components/Button/types'
 const buttonRef = ref<ButtonInstance | null>(null)
 const openedValue = ref(['a'])
+const size = ref<any>('3x')
 onMounted(() => {
   if(buttonRef.value) {
     console.log('buttonRef', buttonRef.value.ref);
   }
   setTimeout(() => {
     openedValue.value= ['a', 'b']
+    size.value = '2xl'
   }, 5000)
 })
 </script>
@@ -26,7 +29,7 @@ onMounted(() => {
       <HelloWorld msg="You did it!" />
     </div>
   </header>
-  <font-awesome-icon icon="fa-solid fa-user-secret" />
+  <Icon icon="arrow-up" :size="size" type="danger" color="#0e7a0d" />
   <main>
     <TheWelcome />
     <Button plain>Plain Button</Button>
