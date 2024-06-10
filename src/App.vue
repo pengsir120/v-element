@@ -47,7 +47,9 @@ onMounted(() => {
     <Button type="warning" plain>Warning</Button>
     <Button type="danger" plain>Danger</Button><br /><br />
     <Button size="large">Large</Button>
-    <Button size="small">Small</Button>
+    <Button size="small">Small</Button><br /><br />
+    <Button size="large" loading>Loading</Button>
+    <Button size="large" icon="arrow-up">Icon</Button><br /><br />
 
     <Collapse v-model="openedValue" accordion>
       <Item name="a">
