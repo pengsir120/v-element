@@ -11,6 +11,7 @@ import type { ButtonInstance } from './components/Button/types'
 const buttonRef = ref<ButtonInstance | null>(null)
 const openedValue = ref(['a'])
 const size = ref<any>('3x')
+const trigger = ref<any>('hover')
 onMounted(() => {
   if(buttonRef.value) {
     console.log('buttonRef', buttonRef.value.ref);
@@ -24,7 +25,7 @@ onMounted(() => {
 
 <template>
   <header>
-    <Tooltip placement="right">
+    <Tooltip placement="right" :trigger="trigger">
       <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
       <template #content>
         <h1>Hello tooltip</h1>
